@@ -19,11 +19,33 @@
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
-              <h1 class="h4">Registro Estudiante</h1>
-              
+              <h1 class="h4"><b>Registro Estudiante</b> </h1>
+
+              <style>
+                label{
+                    color: rgb(16, 233, 16);
+                }
+                h1{
+                    color: rgb(16, 233, 16);
+                }
+                button{
+                    background-color: black;
+                    color: white;
+                }
+                h3{
+                    color:rgb(16, 233, 16);
+
+                }
+                p{
+                    color: rgb(16, 233, 16);
+                }
+                
+                
+
+              </style>
 
               <form id="task-form">
-                <label for="Nombre">Nombre:</label>
+                <label bfor="Nombre">Nombre :</label>
                 <input
                   type="text"
                   id="id-nombre"
@@ -34,13 +56,35 @@
                 />
 
                 <label for="Apellido">Apellido:</label>
-                <textarea
+                <input
                   id="id-apellido"
                   class="form-control mb-3"
                   placeholder="Apellido"
+                  autofocus
+                />
+
+                <label for="Titulo">Titulo:</label>
+                <input
+                  type="text"
+                  id="id-titulo"
+                  class="form-control mb-3"
+                  class="My First Title"
+                  placeholder="Titulo"
+                  autofocus
+                />
+
+
+
+                <label for="Descripcion">Descripcion:</label>
+                <textarea
+                  id="id-descripcion"
+                  class="form-control mb-3"
+                  placeholder="Descripcion"
                 ></textarea>
 
-                <button class="btn btn-primary" id="btn-task-form">Save</button>
+                
+
+                <button class="btn btn-primary" id="btn-task-form" style="background-color:rgb(16, 233, 16)">Save</button>
               </form>
             </div>
           </div>

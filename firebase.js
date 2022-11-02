@@ -34,10 +34,21 @@
 
     const db =getFirestore()
 
-    export const saveTask = (Nombre,Apellido) => 
-      addDoc(collection(db,'Estudiante'), {Nombre,Apellido})
+    export const saveTask = (Nombre,Apellido,Titulo,Descripcion,id) => 
+      addDoc(collection(db,'Estudiante'), {Nombre,Apellido,Titulo,Descripcion})
+
+    
+    export const saveClas = (Titulo,Descripcion) =>
+      addDoc(collection(db,'Clases'),{Titulo,Descripcion})
+
+    export const saveMatr = (idClase) =>
+    addDoc(collection(db,'Matricula'),{idClase})
+
+    
 
     export const getTask =  () => getDocs(collection(db,'task'))
+
+    export const getOtros = () => getDocs(collection(db,'Clases'))
 
     export const onGetTasks = () => console.log('onGetTasks')
 
@@ -52,6 +63,7 @@
     export const editTarea = (id) => getDoc(doc(db,'Estudiante', id))
 
     export const getActuali = (id,newFile) => updateDoc(doc(db,'Estudiante', id),newFile)
+    export const getSiactuali = (id,newFile) => updateDoc(doc(db,'Clases', id),newFile)
 
     
 
